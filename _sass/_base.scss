@@ -1,0 +1,363 @@
+/**
+ * Base Variables
+ */
+$font-header: 'Space Mono', monospace;
+$font-body: 'Inconsolata', monospace;
+$font-post: 'Lora', serif;
+
+$color-alpha: #9f8f68;
+$color-alpha--light: #f5f3ef;
+
+$color-black: #0a0a0a;
+$color-grey: #f8f9f9;
+$color-white: #fff;
+
+$mq-xs: 20em;
+$mq-sm: 40em;
+$mq-md: 75em;
+$mq-lg: 100em;
+$mq-xl: 100em;
+$mq-xxl: 114em;
+
+/**
+ * Base Settings/Overwrite Normalize
+ */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-body;
+  font-feature-settings: 'liga' 0;
+  font-size: 100%;
+  line-height: 1.6;
+
+  @media (min-width: $mq-xs) {
+    font-size: 102.5%;
+  }
+
+  @media (min-width: $mq-sm) {
+    font-size: 105%;
+  }
+
+  @media (min-width: $mq-md) {
+    font-size: 107.5%;
+  }
+
+  @media (min-width: $mq-lg) {
+    font-size: 110%;
+  }
+
+  @media (min-width: $mq-xl) {
+    font-size: 115%;
+  }
+
+  @media (min-width: $mq-xxl) {
+    font-size: 125%;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+
+  font-family: $font-header;
+  line-height: 1.1;
+}
+
+h1, h2, h3 {
+  padding-bottom: 0.75em;
+  padding-top: 1.25em;
+}
+
+h3, h4 {
+  padding-bottom: 0.5em;
+  padding-top: 1em;
+}
+
+
+h1 {
+  $fontSize: 1.2em;
+
+  @media (min-width: 0) {
+    font-size: $fontSize;
+  }
+
+  @media (min-width: 28em) {
+    font-size: $fontSize + .5;
+  }
+
+  @media (min-width: $mq-sm) {
+    font-size: $fontSize + 1.5em;
+  }
+
+
+  @media (min-width: $mq-md) {
+    font-size: $fontSize + 1em;
+  }
+
+
+  @media (min-width: $mq-xl) {
+    font-size: $fontSize + 1.5em;
+  }
+}
+
+h2 {
+  margin-bottom: 0.25em;
+
+  font-size: 1.75em;
+
+  @media (min-width: $mq-md) {
+    font-size: 2em;
+  }
+}
+
+h3 {
+  margin-bottom: 0.1em;
+
+  font-size: 1.5em;
+}
+
+h4 {
+  margin-bottom: 0.1em;
+
+  font-size: 1.25em;
+}
+
+p {
+  margin: 0 0 0.75em;
+}
+
+a {
+  color: $color-black;
+  text-decoration: none;
+  transition: color 0.4s ease-in-out;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-alpha;
+  }
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 75%;
+  max-width: 100%;
+}
+
+blockquote {
+  margin: 2em 0;
+
+  font-family: $font-header;
+  font-weight: 700;
+  font-size: 1.25em;
+}
+
+cite {
+  display: block;
+  margin-top: 0.125em;
+
+  font-family: $font-body;
+  font-weight: 400;
+  font-style: normal;
+
+  &:before {
+    content: "\2014 \0020";
+  }
+}
+
+ol, ul {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Text Selection
+ */
+::selection {
+  color: $color-white;
+  background-color: $color-alpha;
+  text-shadow: none;
+}
+
+/**
+ * Codeblocks
+ */
+
+
+pre {
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 95%;
+  line-height: 140%;
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+  border: 2px solid #262626;
+  box-shadow:  0 0 0 2px #fff, 0 0 0 5px #2179b4;
+  display: block;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+  padding: 1em;
+
+
+  overflow-x: auto;
+
+  @media (min-width: $mq-xs) {
+    font-size: 80%;
+  }
+
+  @media (min-width: $mq-sm) {
+    font-size: 90%;
+  }
+
+  @media (min-width: $mq-md) {
+    font-size: 95%;
+  }
+}       
+
+code {
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+    font-size: 95%;
+    line-height: 140%;
+    white-space: pre;
+}
+
+#content code {
+    display: block;
+    padding: 0.5em 1em;
+    border: 1px solid #bebab0;
+}
+
+
+/**
+ * Output Codeblocks
+ */
+
+preout {
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 95%;
+  line-height: 90%;
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+  border: 2px solid #262626;
+  box-shadow:  0 0 0 2px #fff, 0 0 0 5px #ff9800;
+  display: block;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+  padding: 0em 1em;
+
+  overflow-x: auto;
+
+  @media (min-width: $mq-xs) {
+    font-size: 75%;
+  }
+
+  @media (min-width: $mq-sm) {
+    font-size: 80%;
+  }
+
+  @media (min-width: $mq-md) {
+    font-size: 85%;
+  }
+}       
+
+codeout {
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+    font-size: 85%;
+    white-space: pre;
+}
+
+#content codeout {
+    display: block;
+    /*padding: 0.5em 1em;*/
+    border: 1px solid #bebab0;
+}
+
+/**
+ * Tables
+ */
+div .tabl {
+  overflow-x: auto;
+  width: 91.5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table {
+  border-collapse: collapse;
+  border-radius: 5px;
+  border-style: hidden;
+  box-shadow: 0 0 0 2px #000, 0 0 0 3px #fff, 0 0 0 6px #ff9800;
+  margin: .5em .5em;
+  display: inline-block;
+
+  @media (min-width: $mq-xs) {
+    font-size: 80%;
+  }
+
+  @media (min-width: $mq-sm) {
+    font-size: 90%;
+  }
+
+  @media (min-width: $mq-md) {
+    font-size: 95%;
+  }
+
+}
+
+tr {
+  padding: 0.5em;
+  text-align: center;
+/*  border-bottom: 1px solid #ddd;*/
+  color: #bbb;
+}
+
+th {
+  font-family: $font-header;
+  padding: 0.5em;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  color: #ff9800;
+  text-align: center;
+  background: #303030;
+}
+
+table th {
+  font-size: 90%;
+}
+
+table td {
+  font-size: 85%;
+  background: #454545;
+}
+
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 5px;
+}
+
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 5px;
+}
+
+table tr:first-child th:first-child {
+    border-top-left-radius: 5px;
+}
+
+table tr:first-child th:last-child {
+    border-top-right-radius: 5px;
+}
+
+tr:hover :not(th){
+  background-color: #515151;
+}

@@ -1,0 +1,37 @@
+# Site settings
+email: tbs@tylerbs.com
+baseurl: ""
+paginate: 5
+paginate_path: "/blog/page-:num"
+google_analytics:
+default_welcome_img: "/assets/img/logo3_comp.png"
+
+# SEO settings
+title: Tilting at Windmills
+description: El Blog de el Ingenioso Hidalgo Don Bodine-Smith de la Colorado
+url: "blog.tylerbs.com"
+twitter_username: 
+default_img: "/assets/img/logo3_comp.png"
+
+# Profile settings
+name: Tyler Bodine-Smith
+profile_img: "/assets/img/logo3_comp.png"
+profile: 'Tyler Bodine-Smith: Native Coloradan. Data scientist. Guitarist. Backpacker. Animal lover. Half-way decent at Rocket League.'
+social:
+  github: 'https://github.com/tybodsm'
+
+# Build settings
+exclude: ["_screenshots", "Gemfile", "Gemfile.lock", "LICENSE.txt", "README.md"]
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+permalink: /:year/:month/:day/:title/
+
+# Sass
+sass:
+  style: compressed
+
+# Gems
+gems: [jekyll-paginate, jekyll-sitemap, octopress-autoprefixer]
