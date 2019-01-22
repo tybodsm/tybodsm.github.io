@@ -18,7 +18,7 @@ name: Tyler Bodine-Smith
 profile_img: "/assets/img/logo3_comp.png"
 profile: 'Tyler Bodine-Smith: Native Coloradan. Data scientist. Guitarist. Backpacker. Animal lover. Half-way decent at Rocket League.'
 social:
-  github: 'https://github.com/tybodsm'
+  gitlab: 'https://gitlab.com/tybodsm'
 
 # Build settings
 exclude: ["_screenshots", "Gemfile", "Gemfile.lock", "LICENSE.txt", "README.md"]

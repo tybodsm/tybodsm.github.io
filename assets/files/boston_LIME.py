@@ -33,9 +33,15 @@ def load_data():
 # Regression and LIME            #
 ##################################
 
+
 def regr_LIME(df, features, discretize_continuous=False, observation=5, 
               LIME_model=sklearn_OLS(fit_intercept=True), discretizer='quartile'):
-
+    '''
+        I could probably separate the OLS and LIME stuff here, but the OLS calculation is so light that it's 
+        easier to just let it go. It's a blog post, not production code. But feel free to email me if you 
+        see anything that looks weird/crazy.
+    '''
+    
     # The discretizer gets cranky about pandas dataframes, so until that's fixed, this is a simple workaround
     x = df[features].values
     y = df.value.values
